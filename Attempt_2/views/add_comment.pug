@@ -1,0 +1,13 @@
+extends layout
+
+block content
+    h3 #{title} 
+    form(method="POST", action="/article/add_comment")
+        #form-group
+            label Comment:
+            input.form-control(name='comment', type="text")
+        //- #form-group
+        //-     label Author:
+        //-     input.form-control(name='author', type="text")
+        br
+        input.btn.btn-primary(type="submit", value="Submit")
